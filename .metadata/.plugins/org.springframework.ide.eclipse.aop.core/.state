@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="HANDSONSPRINGBOOT"/>
+<aop-project name="ACADEMYPORTAL"/>
+<aop-project name="STSDEMO"/>
+</aop-reference-model>

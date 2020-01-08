@@ -1,0 +1,16 @@
+package com.dao;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.model.Batch;
+
+public interface BatchDaoRepository extends CrudRepository<Batch, Integer> {
+
+	public Batch findByBatchId(int batchId);
+
+	public List<Batch> findByAll(Batch batch); 
+	
+
+}

@@ -1,0 +1,50 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.dao.BatchDaoRepository;
+import com.model.Batch;
+@Service
+public class BatchServiceImpl implements BatchService {
+	@Autowired
+	private BatchDaoRepository batchDaoRepository;
+
+	@Override
+	public Batch readById(int batchId) {
+		
+		return this.batchDaoRepository.findByBatchId(batchId);
+	}
+
+	@Override
+	public Batch create(Batch batch) {
+		
+		return this.batchDaoRepository.save(batch);
+	}
+
+	
+
+	@Override
+	public void delete(int batchId) {
+		this.batchDaoRepository.deleteById(batchId);
+	}
+
+	@Override
+	public List<Batch> viewBatchList(String course) {
+		
+		return this.batchDaoRepository.findByCourse(course);
+	}
+
+	@Override
+	public Batch updateByBatchId(Batch batch) {
+		
+		return this.batchDaoRepository.save(batch);
+	}
+	
+
+	
+
+}

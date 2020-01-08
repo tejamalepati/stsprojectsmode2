@@ -1,0 +1,16 @@
+package com.service;
+
+import java.util.List;
+
+
+import com.model.Batch;
+
+public interface BatchService {
+
+	public Batch readById(int batchId);
+	public Batch create( Batch  batch);
+	public Batch updateByBatchId(Batch batch);
+	public void delete(int batchId);
+  
+	public List<Batch> viewBatchList(String course);
+}
